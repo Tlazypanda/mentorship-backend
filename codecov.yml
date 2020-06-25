@@ -1,3 +1,4 @@
+#codecov yaml for bot
 codecov:
   require_ci_to_pass: yes
 
