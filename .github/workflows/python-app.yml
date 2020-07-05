@@ -13,10 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      TRAVIS_REPO_SLUG: ${{ github.repository }} 
-      TRAVIS_BRANCH: ${{ github.head_ref }} 
-      TRAVIS_PULL_REQUEST: ${{ github.event.number }} 
 
     steps:
     - uses: actions/checkout@v2
@@ -24,9 +20,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.6
-    - name: Before script
-      run: |
-        chmod +x deploy.sh    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
