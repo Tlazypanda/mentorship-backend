@@ -27,9 +27,6 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover tests -v
-    - name: After success
-      run: |
-        ./deploy.sh  
     - name: Generate coverage report
       run: |
         pip install pytest
